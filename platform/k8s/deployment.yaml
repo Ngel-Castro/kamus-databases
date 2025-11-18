@@ -98,7 +98,7 @@ spec:
     port: 27017
     protocol: TCP
     targetPort: 27017
-    nodePort: 32000
+    nodePort: 327017
   - name: mongo-express
     port: 8081
     protocol: TCP
