@@ -78,8 +78,6 @@ spec:
               key: password
         - name: ME_CONFIG_MONGODB_SERVER
           value: "localhost"
-        - name: ME_CONFIG_MONGODB_PORT
-          value: "27017"
         - name: ME_CONFIG_BASICAUTH
           value: "false"
       volumes:
