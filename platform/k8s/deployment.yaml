@@ -31,7 +31,7 @@ metadata:
   name: mongo
   namespace: databases
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: mongo
@@ -76,8 +76,10 @@ spec:
             secretKeyRef:
               name: mongo-creds
               key: password
-        - name: ME_CONFIG_MONGODB_URL
-          value: "mongodb://${ME_CONFIG_MONGODB_ADMINUSERNAME}:${ME_CONFIG_MONGODB_ADMINPASSWORD}@localhost:27017/?authSource=admin"
+        - name: ME_CONFIG_MONGODB_SERVER
+          value: "localhost"
+        - name: ME_CONFIG_MONGODB_PORT
+          value: 27017
         - name: ME_CONFIG_BASICAUTH
           value: "false"
       volumes:
