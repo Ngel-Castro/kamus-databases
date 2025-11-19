@@ -26,11 +26,12 @@ spec:
       storage: 1Gi
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefuSet
 metadata:
   name: mongo
   namespace: databases
 spec:
+  serviceName: "mongo-service"
   replicas: 1
   selector:
     matchLabels:
