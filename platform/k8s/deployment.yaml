@@ -61,25 +61,6 @@ spec:
         volumeMounts:
         - name: "mongo-data-dir"
           mountPath: "/data/db"
-#      - name: mongo-express
-#        image: mongo-express:latest
-#       ports:
-#       - containerPort: 8081
-#        env:
-#        - name: ME_CONFIG_MONGODB_ADMINUSERNAME
-#          valueFrom:
-#            secretKeyRef:
-#              name: mongo-creds
-#              key: username
-#        - name: ME_CONFIG_MONGODB_ADMINPASSWORD
-#          valueFrom:
-#            secretKeyRef:
-#              name: mongo-creds
-#              key: password
-#        - name: ME_CONFIG_MONGODB_SERVER
-#          value: "localhost"
-#        - name: ME_CONFIG_BASICAUTH
-#          value: "false"
       volumes:
       - name: "mongo-data-dir"
         persistentVolumeClaim:
@@ -99,11 +80,6 @@ spec:
     protocol: TCP
     targetPort: 27017
     nodePort: 32700
-#  - name: mongo-express
-#    port: 8081
-#    protocol: TCP
-#    targetPort: 8081
-#    nodePort: 32081
   selector:
     app: mongo
   type: LoadBalancer
