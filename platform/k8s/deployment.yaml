@@ -22,7 +22,7 @@ spec:
   capacity:
     storage: 10Gi
   hostPath:
-    path: /mnt/mongodb
+    path: /mnt/truenas/shared/mongodb
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
