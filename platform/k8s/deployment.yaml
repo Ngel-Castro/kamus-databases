@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 50Gi
   hostPath:
-    path: /mnt/truenas/shared/sql
+    path: /mnt/sql
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -22,7 +22,7 @@ spec:
   capacity:
     storage: 10Gi
   hostPath:
-    path: /mnt/truenas/shared/mongodb
+    path: /mnt/mongodb
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
